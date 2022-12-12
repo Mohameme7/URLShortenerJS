@@ -3,7 +3,7 @@ const sqlite3 = require('sqlite3')
 var router = express.Router();
 var crypto = require("crypto");
 function RandomString() {
-    return crypto.randomBytes(20).toString('hex');
+    return crypto.randomBytes(6).toString('hex');
 }
 let db = new sqlite3.Database('database.db', (err) => {
     if (err) {
